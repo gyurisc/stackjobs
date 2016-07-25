@@ -9,11 +9,19 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
+LOG_ENABLED = False
+
 BOT_NAME = 'stackjobs'
 
 SPIDER_MODULES = ['stackjobs.spiders']
 NEWSPIDER_MODULE = 'stackjobs.spiders'
 
+ITEM_PIPELINES = {'stackjobs.pipelines.MongoDBPipeline' : 300, }
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "stackoverflow"
+MONGODB_COLLECTION = "jobs"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'stackjobs (+http://www.yourdomain.com)'
