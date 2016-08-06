@@ -1,5 +1,5 @@
 # stackjobs
-Very simple scrapy scraper to get stackoverflow jobs.
+Very simple scrapy scraper to get stackoverflow jobs using mongodb as store and pandas to enhance data.
 
 Articles written realted to this project: 
 
