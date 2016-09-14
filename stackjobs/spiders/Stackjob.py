@@ -22,7 +22,8 @@ class StackjobSpider(Spider):
         
         for job in jobs: 
             item = StackjobItem()    
-            item['date'] = t.strftime('%Y-%m-%d')                       
+            item['date'] = t.strftime('%Y-%m-%d') 
+            item['weeknum'] = t.isocalendar()[1]                      
             item['tags'] = job.xpath('div[contains(@class,"tags")]/p/a/text()').extract()
             item['description'] = job.xpath('p[contains(@class,"text") and contains(@class, "description")]/text()').extract()[0]
             item['location'] = job.xpath('ul[contains(@class, "metadata") and contains(@class, "primary")]/li[contains(@class, "location")]/text()').extract()[0].strip()
