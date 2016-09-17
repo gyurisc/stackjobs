@@ -21,5 +21,6 @@ class StackjobItem(scrapy.Item):
     salary = Field()
     tags = Field()    
     date = Field()
+    weeknum = Field()
     pass
 
