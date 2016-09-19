@@ -64,13 +64,13 @@ jobs['city'] = jobs['city'].str.strip()
 jobs['country'] = jobs['country'].str.strip()
 
 # replacing some of the country names with their english version 
-jobs[jobs['country'].str.contains('Deutschland')] = 'Germany' # Deutschland -> Germany
-jobs[jobs['country'].str.contains('Österreich')] = 'Austria' # Österreich -> Austria
-jobs[jobs['country'].str.contains('Suisse')] = 'Switzerland' # Suisse -> Switzerland
-jobs[jobs['country'].str.contains('Schweiz')] = 'Switzerland' # Schweiz -> Switzerland
-jobs[jobs['country'].str.contains('Espagne')] = 'Spain' # Espagne -> Spain
-jobs[jobs['country'].str.contains('République tchèque')] = 'Czech Republic' # République tchèque -> Czech Republic
-jobs[jobs['country'].str.contains('Niederlande')] = 'Netherlands' # Niederlande -> Netherlands
+jobs.loc[jobs['country'].str.contains('Deutschland'),'country'] = 'Germany' # Deutschland -> Germany
+jobs.loc[jobs['country'].str.contains('Österreich'),'country'] = 'Austria' # Österreich -> Austria
+jobs.loc[jobs['country'].str.contains('Suisse'), 'country'] = 'Switzerland' # Suisse -> Switzerland
+jobs.loc[jobs['country'].str.contains('Schweiz'), 'country'] = 'Switzerland' # Schweiz -> Switzerland
+jobs.loc[jobs['country'].str.contains('Espagne'), 'country'] = 'Spain' # Espagne -> Spain
+jobs.loc[jobs['country'].str.contains('République tchèque'), 'country'] = 'Czech Republic' # République tchèque -> Czech Republic
+jobs.loc[jobs['country'].str.contains('Niederlande'), 'country'] = 'Netherlands' # Niederlande -> Netherlands
 
 # redefining columns
 jobs.title = jobs.title.astype(str)
