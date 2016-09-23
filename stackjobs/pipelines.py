@@ -23,10 +23,16 @@ class MongoDBPipeline(object):
         self.ids_seen = set()
         for job in self.collection.find():
             self.ids_seen.add(job['jobid'])
+
+        print "Start: %s" % (len(self.ids_seen))        
         
-        print "Number of jobs in database"
-        print len(self.ids_seen)
-        
+    def open_spider(self, spider):
+        print "Open Spider"
+
+    def close_spider(self, spider):
+        print "Finish: %s" % (len(self.ids_seen))
+        print "Close Spider"
+                
     def process_item(self, item, spider):
         
         valid = True
