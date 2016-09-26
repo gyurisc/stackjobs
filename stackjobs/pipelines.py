@@ -27,12 +27,12 @@ class MongoDBPipeline(object):
         print "Start: %s" % (len(self.ids_seen))        
         
     def open_spider(self, spider):
-        print "Open Spider"
+        print "Open Spider."
 
     def close_spider(self, spider):
         print "Finish: %s" % (len(self.ids_seen))
-        print "Close Spider"
-                
+        print "Close Spider."
+
     def process_item(self, item, spider):
         
         valid = True
