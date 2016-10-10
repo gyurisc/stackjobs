@@ -11,7 +11,13 @@ class StackjobSpider(Spider):
     start_urls = (
         'https://stackoverflow.com/jobs?sort=p',
         'https://stackoverflow.com/jobs?sort=p&pg=2',
-        'https://stackoverflow.com/jobs?sort=p&pg=3'
+        'https://stackoverflow.com/jobs?sort=p&pg=3',
+        'https://stackoverflow.com/jobs?sort=p&pg=4',
+        'https://stackoverflow.com/jobs?sort=p&pg=5',
+        'https://stackoverflow.com/jobs?sort=p&pg=6',
+        'https://stackoverflow.com/jobs?sort=p&pg=7',
+        'https://stackoverflow.com/jobs?sort=p&pg=8',
+        'https://stackoverflow.com/jobs?sort=p&pg=9'
     )
     def parse(self, response):
         jobs = Selector(response).xpath('//div[contains(@class, "-item") and contains(@class, "-job")]')
