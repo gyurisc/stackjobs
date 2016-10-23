@@ -20,7 +20,9 @@ merged_jobs.drop_duplicates(keep='last', inplace=True)
 print "After de-deuplication count is " + str(len(merged_jobs.index))
 
 timestr = time.strftime("%Y%m%d")
-out_path = "./data/jobs_merged_" + timestr + "_" + str(len(merged_jobs.index))  + ".csv"
+
+#out_path = "./data/stackoverflow_merged_jobs_" + timestr + "_" + str(len(merged_jobs.index))  + ".csv"
+out_path = "./data/stackoverflow_jobs.csv"
 
 # writing it out 
 merged_jobs.to_csv(out_path,mode='w')    

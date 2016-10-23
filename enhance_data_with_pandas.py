@@ -8,6 +8,10 @@ import numpy as np
 
 jobs = pd.read_csv('data/stackoverflow_jobs.csv')
 
+#
+print "Read data " + str(len(jobs.index)) + " rows."
+
+
 # Salary 
 jobs.salary = jobs.salary.fillna('')
 
@@ -74,7 +78,7 @@ jobs.loc[jobs['country'].str.contains('Niederlande'), 'country'] = 'Netherlands'
 
 # redefining columns
 jobs.title = jobs.title.astype(str)
-print jobs.dtypes
+print "Writing out enhanced data " + str(len(jobs.index)) + " rows."
 
 # saving the result to csv 
 jobs.to_csv('data/stackoverflow_jobs_enhanced.csv', index = False)
