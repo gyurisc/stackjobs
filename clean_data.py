@@ -1,3 +1,4 @@
+# Ad-hoc fixing of mongo database 
 from datetime import datetime
 import pymongo 
 
