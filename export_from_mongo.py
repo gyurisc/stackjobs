@@ -4,7 +4,7 @@ import pandas as pd
 
 def export_jobs(year, weeknum): 
     df = pd.DataFrame(list(jobs.find({ "weeknum": weeknum}))) 
-    
+
     # Dropping _id column
     df = df.drop('_id', 1)
 
@@ -24,9 +24,12 @@ t = datetime.date.today()
 weeknum = t.isocalendar()[1] 
 year = t.isocalendar()[0] 
 
+print year
+print weeknum
     
+# previous week
+export_jobs(year, weeknum-1)
+
 # this week 
 export_jobs(year, weeknum)
 
-# previous week
-export_jobs(year, weeknum-1)
