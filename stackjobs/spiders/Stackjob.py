@@ -23,8 +23,8 @@ class StackjobSpider(Spider):
         jobs = Selector(response).xpath('//div[contains(@class, "-item") and contains(@class, "-job")]')
         results = [] 
         
-        t = datetime.date.today()
-        
+        t = datetime.date.today()        
+
         for job in jobs:             
             item = StackjobItem()    
             item['date'] = t.strftime('%Y-%m-%d')                           
