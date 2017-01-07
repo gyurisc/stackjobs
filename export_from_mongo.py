@@ -27,8 +27,12 @@ year = t.isocalendar()[0]
 print year
 print weeknum
     
+
 # previous week
-export_jobs(year, weeknum-1)
+if weeknum > 1:
+    export_jobs(year, weeknum-1)
+else:
+    export_jobs(year-1, 52)
 
 # this week 
 export_jobs(year, weeknum)
