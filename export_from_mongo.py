@@ -2,8 +2,9 @@ import pymongo
 import datetime
 import pandas as pd
 
-def export_jobs(year, weeknum): 
-    df = pd.DataFrame(list(jobs.find({ "weeknum": weeknum}))) 
+def export_jobs(year, weeknum):
+    year_regex = '^' + str(year)       
+    df = pd.DataFrame(list(jobs.find({ "weeknum": weeknum, "date" : {"$regex": year_regex}}))) 
 
     # Dropping _id column
     df = df.drop('_id', 1)
