@@ -50,4 +50,4 @@ technologies['salary_mean'] = technologies[['salary_high','salary_low']].mean(ax
 technologies.fillna('', inplace=True)
 
 # saving the result to csv 
-technologies.to_csv('../data/technologies.csv', index = False)
+technologies.to_csv('data/technologies.csv', index = False)
