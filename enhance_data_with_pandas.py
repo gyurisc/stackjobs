@@ -83,6 +83,7 @@ jobs.loc[jobs['country'].str.contains('Belgien'), 'country'] = 'Belgium' # Belgi
 jobs.loc[jobs['country'].str.contains('Irland'), 'country'] = 'Ireland' # Irland -> Ireland
 jobs.loc[jobs['country'].str.contains('Tschechische Republik'), 'country'] = 'Czech Republic' # Czech Republic
 jobs.loc[jobs['country'].str.contains('Royaume-Uni'), 'country'] = 'UK' # UK
+jobs.loc[jobs['country'].str.contains('Vereinigtes Königreich'), 'country'] = 'UK' # UK
 
 
 # redefining columns
