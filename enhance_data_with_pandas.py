@@ -73,8 +73,17 @@ jobs.loc[jobs['country'].str.contains('Österreich'),'country'] = 'Austria' # Ö
 jobs.loc[jobs['country'].str.contains('Suisse'), 'country'] = 'Switzerland' # Suisse -> Switzerland
 jobs.loc[jobs['country'].str.contains('Schweiz'), 'country'] = 'Switzerland' # Schweiz -> Switzerland
 jobs.loc[jobs['country'].str.contains('Espagne'), 'country'] = 'Spain' # Espagne -> Spain
+jobs.loc[jobs['country'].str.contains('Spanien'), 'country'] = 'Spain' # Spanien -> Spain
 jobs.loc[jobs['country'].str.contains('République tchèque'), 'country'] = 'Czech Republic' # République tchèque -> Czech Republic
 jobs.loc[jobs['country'].str.contains('Niederlande'), 'country'] = 'Netherlands' # Niederlande -> Netherlands
+jobs.loc[jobs['country'].str.contains('Polen'), 'country'] = 'Poland' # Polen -> Poland
+jobs.loc[jobs['country'].str.contains('Bulgarien'), 'country'] = 'Bulgaria' # Bulgarien -> Bulgaria
+jobs.loc[jobs['country'].str.contains('Belgique'), 'country'] = 'Belgium' # Belgique -> Belgium
+jobs.loc[jobs['country'].str.contains('Belgien'), 'country'] = 'Belgium' # Belgien -> Belgium
+jobs.loc[jobs['country'].str.contains('Irland'), 'country'] = 'Ireland' # Irland -> Ireland
+jobs.loc[jobs['country'].str.contains('Tschechische Republik'), 'country'] = 'Czech Republic' # Czech Republic
+jobs.loc[jobs['country'].str.contains('Royaume-Uni'), 'country'] = 'UK' # UK
+
 
 # redefining columns
 jobs.title = jobs.title.astype(str)
